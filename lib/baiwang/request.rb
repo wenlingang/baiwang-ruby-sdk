@@ -20,8 +20,6 @@ module Baiwang
       path = "/router/rest?#{build_sorted_params(par)}"
 
       request(path, post_header) do |url, header|
-        Baiwang.logger.info "url: #{url}"
-        Baiwang.logger.info "payload: #{post_body}"
         params = header.delete(:params)
         header['Content-Type'] = 'application/json'
         http.headers(header).post(url, params: params, json: post_body, ssl_context: ssl_context)
@@ -41,7 +39,6 @@ module Baiwang
     end
 
     def parse_as_json(body)
-      Baiwang.logger.info "response body: #{body}"
       data = JSON.parse body.to_s
       Result.new(data)
     end
@@ -50,7 +47,6 @@ module Baiwang
     def sign_pb(par, body)
       q = par.sort.map { |k, v| "#{k}#{v}" unless k.start_with?("sign") }.join
       text = "#{Baiwang.config.default_app_secret}#{q}#{body.to_json}#{Baiwang.config.default_app_secret}"
-      Baiwang.logger.info "sign_pb text: #{text}"
       Digest::MD5.hexdigest(text).upcase
     end
 
