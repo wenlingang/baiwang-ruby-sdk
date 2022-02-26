@@ -3,7 +3,7 @@
 require_relative 'lib/baiwang/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'baiwang-ruby-sdk'
+  spec.name          = 'baiwang-sdk'
   spec.version       = Baiwang::VERSION
   spec.authors       = ['wenlingang']
   spec.email         = ['wen.sprint@gmail.com']
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'activesupport', '>= 5.0'
+  spec.add_dependency 'activesupport', '>= 3.2.0'
   spec.add_dependency 'http', '>= 2.2'
   spec.add_dependency 'redis'
 

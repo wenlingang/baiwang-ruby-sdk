@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    baiwang-ruby-sdk (0.0.1)
-      activesupport (>= 5.0)
+    baiwang-sdk (0.0.1)
+      activesupport (>= 3.2.0)
       http (>= 2.2)
       redis
 
@@ -52,7 +52,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
-  baiwang-ruby-sdk!
+  baiwang-sdk!
   bundler (>= 1.13)
   minitest (~> 5.0)
   rake (~> 13.0)
