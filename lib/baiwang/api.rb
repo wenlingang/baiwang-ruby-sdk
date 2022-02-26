@@ -8,6 +8,9 @@ module Baiwang
     api_mount :output
     api_mount :ocr
     api_mount :user_center
+    api_mount :ec
+    api_mount :layoutservice
+    api_mount :scc
 
     attr_reader :app_key, :app_secret, :admin_username, :admin_password, :admin_salt, :options
 
