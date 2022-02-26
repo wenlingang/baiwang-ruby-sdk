@@ -7,7 +7,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'baiwang-ruby-sdk'
+gem 'baiwang-sdk'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install baiwang-ruby-sdk
+    $ gem install baiwang-sdk
 
 ## Usage
 
@@ -26,7 +26,7 @@ Or install it yourself as:
 # config/initializers/baiwang.rb
 
 Baiwang.configure do |config|
-  config.redis = Redis.new(url: 'redis://127.0.0.1:6379/1')
+  config.redis = Redis.new(url: 'redis:host')
   config.default_app_key = 'xxx'
   config.default_app_secret = 'xxx'
   config.api_base_url = 'xxx'
@@ -41,7 +41,7 @@ api = Baiwang::Api.new()
 ```
 
 ```ruby
-api.post(method, body, headers)
+resp = api.user_center.common_company_verify_query({"tax_no" => "xxx"})
 ```
 
 ## Development
@@ -52,4 +52,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/baiwang-ruby-sdk.
+Bug reports and pull requests are welcome on GitHub at https://github.com/wenlingang/baiwang-ruby-sdk.
