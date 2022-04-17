@@ -1,11 +1,11 @@
 module Baiwang
   module Apis
     module Ocr
-      def ocr_stand_tickets(payload = {})
+      def stand_tickets(payload = {})
         post 'baiwang.ocr.stand.tickets', payload
       end
 
-      def ocr_stand_queryresult(payload = {})
+      def stand_queryresult(payload = {})
         post 'baiwang.ocr.stand.queryresult', payload
       end
 

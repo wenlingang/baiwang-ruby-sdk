@@ -44,6 +44,10 @@ api = Baiwang::Api.new()
 resp = api.user_center.common_company_verify_query({"tax_no" => "xxx"})
 ```
 
+## Apis
+
+https://github.com/wenlingang/baiwang-ruby-sdk/apis.md
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

@@ -5,7 +5,7 @@ module Baiwang
         post 'baiwang.common.company.verify.query', payload
       end
 
-      def usercenter_tenant_add_tenant(payload={})
+      def tenant_add_tenant(payload={})
         post 'baiwang.usercenter.tenant.addTenant', payload
       end
 
@@ -17,23 +17,23 @@ module Baiwang
         post 'baiwang.invoice.admin.getTaxNoInfo', payload
       end
 
-      def usercenter_user_add_user(payload = {})
+      def user_add_user(payload = {})
         post 'baiwang.usercenter.user.addUser', payload
       end
 
-      def usercenter_user_update_user(payload = {})
+      def user_update_user(payload = {})
         post 'baiwang.usercenter.user.updateUser', payload
       end
 
-      def usercenter_org_add_org(payload = {})
+      def org_add_org(payload = {})
         post 'baiwang.usercenter.org.addOrg', payload
       end
 
-      def usercenter_org_get_org_by_condition(payload = {})
+      def org_get_org_by_condition(payload = {})
         post 'baiwang.usercenter.org.getOrgByCondition', payload
       end
 
-      def usercenter_org_update_org(payload = {})
+      def org_update_org(payload = {})
         post 'baiwang.usercenter.org.updateOrg', payload
       end
     end
